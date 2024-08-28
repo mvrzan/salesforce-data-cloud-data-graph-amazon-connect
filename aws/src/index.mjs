@@ -145,8 +145,47 @@ export const handler = async (event) => {
             .Appointment__dlm[
             parsedJson.UnifiedssotIndividualPat__dlm[0]
               .UnifiedLinkssotIndividualPat__dlm[3].ssot__Individual__dlm[0]
-              .Appointment__dlm - 1
+              .Appointment__dlm.length - 1
           ].Appointment_Time_c__c,
+        createdDate:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[3].ssot__Individual__dlm[0]
+            .Appointment__dlm[
+            parsedJson.UnifiedssotIndividualPat__dlm[0]
+              .UnifiedLinkssotIndividualPat__dlm[3].ssot__Individual__dlm[0]
+              .Appointment__dlm.length - 1
+          ].CreatedDate__c,
+        name: parsedJson.UnifiedssotIndividualPat__dlm[0]
+          .UnifiedLinkssotIndividualPat__dlm[3].ssot__Individual__dlm[0]
+          .Appointment__dlm[
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[3].ssot__Individual__dlm[0]
+            .Appointment__dlm.length - 1
+        ].Name__c,
+        procedure:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[3].ssot__Individual__dlm[0]
+            .Appointment__dlm[
+            parsedJson.UnifiedssotIndividualPat__dlm[0]
+              .UnifiedLinkssotIndividualPat__dlm[3].ssot__Individual__dlm[0]
+              .Appointment__dlm.length - 1
+          ].Procedure_c__c,
+        procedureId:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[3].ssot__Individual__dlm[0]
+            .Appointment__dlm[
+            parsedJson.UnifiedssotIndividualPat__dlm[0]
+              .UnifiedLinkssotIndividualPat__dlm[3].ssot__Individual__dlm[0]
+              .Appointment__dlm.length - 1
+          ].Procedure_Id__c,
+        status:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[3].ssot__Individual__dlm[0]
+            .Appointment__dlm[
+            parsedJson.UnifiedssotIndividualPat__dlm[0]
+              .UnifiedLinkssotIndividualPat__dlm[3].ssot__Individual__dlm[0]
+              .Appointment__dlm.length - 1
+          ].Status_c__c,
       },
     };
 

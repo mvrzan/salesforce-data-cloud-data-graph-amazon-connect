@@ -28,9 +28,9 @@ export const handler = async (event) => {
     if (!dataCloudDataGraphLookupResponse.ok) {
       const status = dataCloudDataGraphLookupResponse.status;
       const errorText = dataCloudDataGraphLookupResponse.statusText;
-      console.error("Data Cloud Ingestion API Error:", errorText);
+      console.error("Data Cloud Data Graph error:", errorText);
       throw new Error(
-        `HTTP error when sending data to Data Cloud Ingestion API, status = ${status}`
+        `HTTP error when fetching data from the Data Cloud Data Graph, status = ${status}`
       );
     }
 
@@ -49,8 +49,6 @@ export const handler = async (event) => {
       dataCloudDataGraphLookupResponseData.data[0].json_blob__c
     );
     const parsedJson = JSON.parse(decodedJson);
-
-    // console.log("Data Cloud Data Graph lookup response data:", parsedJson);
 
     const formattedResponseObject = {
       firstName: parsedJson.UnifiedssotIndividualPat__dlm[0].ssot__FirstName__c,
@@ -189,56 +187,9 @@ export const handler = async (event) => {
       },
     };
 
-    // "Appointment__dlm": [
-    //     {
-    //         "Appointment_Time_c__c": "2024-07-12T00:00:00.000Z",
-    //         "Contact_c__c": "003ao000002TdD7AAK",
-    //         "CreatedDate__c": "2024-03-14T18:21:06.000Z",
-    //         "Id__c": "a1Lao000000Fg7IEAS",
-    //         "Name__c": "Teeth Whitening for Robyn",
-    //         "Procedure_c__c": "Teeth Whitening",
-    //         "Procedure_Id__c": "TWHIT",
-    //         "Status_c__c": "Confirmed"
-    //     },
-    //     {
-    //         "Appointment_Time_c__c": "2024-07-29T00:00:00.000Z",
-    //         "Contact_c__c": "003ao000002TdD7AAK",
-    //         "CreatedDate__c": "2024-03-14T18:21:06.000Z",
-    //         "Id__c": "a1Lao000000Fg7LEAS",
-    //         "Name__c": "Teeth Whitening for Robyn",
-    //         "Procedure_c__c": "Teeth Whitening",
-    //         "Procedure_Id__c": "TWHIT",
-    //         "Status_c__c": "Confirmed"
-    //     },
-    //     {
-    //         "Appointment_Time_c__c": "2024-03-21T00:00:00.000Z",
-    //         "Contact_c__c": "003ao000002TdD7AAK",
-    //         "CreatedDate__c": "2024-03-14T18:21:06.000Z",
-    //         "Id__c": "a1Lao000000Fg7KEAS",
-    //         "Name__c": "Teeth Cleaning for Robyn",
-    //         "Procedure_c__c": "Teeth Cleaning",
-    //         "Procedure_Id__c": "TCLNG",
-    //         "Status_c__c": "Confirmed"
-    //     },
-    //     {
-    //         "Appointment_Time_c__c": "2023-11-22T00:00:00.000Z",
-    //         "Contact_c__c": "003ao000002TdD7AAK",
-    //         "CreatedDate__c": "2024-03-14T18:21:06.000Z",
-    //         "Id__c": "a1Lao000000Fg7JEAS",
-    //         "Name__c": "Periodontal Therapy for Robyn",
-    //         "Procedure_c__c": "Periodontal Therapy",
-    //         "Procedure_Id__c": "PRTAP",
-    //         "Status_c__c": "Completed"
-    //     }
-    // ]
-
     console.log("Formatted response object:", formattedResponseObject);
 
-    return {
-      test1: "test1",
-      test2: "test2",
-      test3: "test3",
-    };
+    return formattedResponseObject;
   } catch (error) {
     console.error("Error has occurred:", error);
     const errorResponse = {

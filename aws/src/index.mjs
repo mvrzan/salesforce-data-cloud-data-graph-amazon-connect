@@ -7,18 +7,21 @@ export const handler = async (event) => {
     console.log("Lambda Function handler called");
     const { token, salesforceInstanceUrl } = await getSfToken();
 
-    console.log("We got the token!", token, salesforceInstanceUrl);
-
     console.log("Event:", event);
 
     // Data Cloud Data Graph lookup
-    const dataCloudDataGraphLookupUrl = `https://${salesforceInstanceUrl}/services/data/v61.0/ssot/data-graphs/data/UC_phone_number_lookup?lookupKeys=ssot__FormattedE164PhoneNumber__c=5983841363`;
+    const dataCloudDataGraphLookupUrl = `${salesforceInstanceUrl}/services/data/v61.0/ssot/data-graphs/data/UC_phone_number_lookup?lookupKeys=ssot__FormattedE164PhoneNumber__c=241.572.2605`;
+
+    console.log(
+      "Data Cloud Data Graph lookup URL:",
+      dataCloudDataGraphLookupUrl
+    );
 
     // Send data to Data Cloud Data Graph lookup API
     const dataCloudDataGraphLookupResponse = await fetch(
       dataCloudDataGraphLookupUrl,
       {
-        method: "POST",
+        method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",

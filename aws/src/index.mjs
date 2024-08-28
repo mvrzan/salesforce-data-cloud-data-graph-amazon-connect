@@ -86,7 +86,112 @@ export const handler = async (event) => {
             .UnifiedLinkssotIndividualPat__dlm[0].ssot__Individual__dlm[0]
             .ssot__WebsiteEngagement__dlm[0].Webpage_Category__c,
       },
+      emailEngagement: {
+        engagementDate:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[1].ssot__Individual__dlm[0]
+            .ssot__EmailEngagement__dlm[0].ssot__EngagementDateTm__c,
+        emailSubject:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[1].ssot__Individual__dlm[0]
+            .ssot__EmailEngagement__dlm[0].ssot__SubjectLineTxt__c,
+        emailName:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[1].ssot__Individual__dlm[0]
+            .ssot__EmailEngagement__dlm[0].ssot__EmailName__c,
+        engagementType:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[1].ssot__Individual__dlm[0]
+            .ssot__EmailEngagement__dlm[0].ssot__EngagementTypeId__c,
+        emailSentDate:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[1].ssot__Individual__dlm[0]
+            .ssot__EmailEngagement__dlm[0].ssot__SentDateTm__c,
+      },
+      smsEngagement: {
+        engagementDate:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[1].ssot__Individual__dlm[0]
+            .ssot__MessageEngagement__dlm[0].ssot__EngagementDateTm__c,
+        engagementType:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[1].ssot__Individual__dlm[0]
+            .ssot__MessageEngagement__dlm[0].ssot__EngagementTypeId__c,
+        keywordText:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[1].ssot__Individual__dlm[0]
+            .ssot__MessageEngagement__dlm[0].ssot__KeywordText__c,
+        smsName:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[1].ssot__Individual__dlm[0]
+            .ssot__MessageEngagement__dlm[0].ssot__Name__c,
+        sendTimePhoneNumber:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[1].ssot__Individual__dlm[0]
+            .ssot__MessageEngagement__dlm[0].ssot__SendTimePhoneNumber__c,
+        sentDate:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[1].ssot__Individual__dlm[0]
+            .ssot__MessageEngagement__dlm[0].ssot__SentDateTm__c,
+        templateName:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[1].ssot__Individual__dlm[0]
+            .ssot__MessageEngagement__dlm[0].Tempate_Name,
+      },
+      latestAppointment: {
+        appointmentTime:
+          parsedJson.UnifiedssotIndividualPat__dlm[0]
+            .UnifiedLinkssotIndividualPat__dlm[3].ssot__Individual__dlm[0]
+            .Appointment__dlm[
+            parsedJson.UnifiedssotIndividualPat__dlm[0]
+              .UnifiedLinkssotIndividualPat__dlm[3].ssot__Individual__dlm[0]
+              .Appointment__dlm - 1
+          ].Appointment_Time_c__c,
+      },
     };
+
+    // "Appointment__dlm": [
+    //     {
+    //         "Appointment_Time_c__c": "2024-07-12T00:00:00.000Z",
+    //         "Contact_c__c": "003ao000002TdD7AAK",
+    //         "CreatedDate__c": "2024-03-14T18:21:06.000Z",
+    //         "Id__c": "a1Lao000000Fg7IEAS",
+    //         "Name__c": "Teeth Whitening for Robyn",
+    //         "Procedure_c__c": "Teeth Whitening",
+    //         "Procedure_Id__c": "TWHIT",
+    //         "Status_c__c": "Confirmed"
+    //     },
+    //     {
+    //         "Appointment_Time_c__c": "2024-07-29T00:00:00.000Z",
+    //         "Contact_c__c": "003ao000002TdD7AAK",
+    //         "CreatedDate__c": "2024-03-14T18:21:06.000Z",
+    //         "Id__c": "a1Lao000000Fg7LEAS",
+    //         "Name__c": "Teeth Whitening for Robyn",
+    //         "Procedure_c__c": "Teeth Whitening",
+    //         "Procedure_Id__c": "TWHIT",
+    //         "Status_c__c": "Confirmed"
+    //     },
+    //     {
+    //         "Appointment_Time_c__c": "2024-03-21T00:00:00.000Z",
+    //         "Contact_c__c": "003ao000002TdD7AAK",
+    //         "CreatedDate__c": "2024-03-14T18:21:06.000Z",
+    //         "Id__c": "a1Lao000000Fg7KEAS",
+    //         "Name__c": "Teeth Cleaning for Robyn",
+    //         "Procedure_c__c": "Teeth Cleaning",
+    //         "Procedure_Id__c": "TCLNG",
+    //         "Status_c__c": "Confirmed"
+    //     },
+    //     {
+    //         "Appointment_Time_c__c": "2023-11-22T00:00:00.000Z",
+    //         "Contact_c__c": "003ao000002TdD7AAK",
+    //         "CreatedDate__c": "2024-03-14T18:21:06.000Z",
+    //         "Id__c": "a1Lao000000Fg7JEAS",
+    //         "Name__c": "Periodontal Therapy for Robyn",
+    //         "Procedure_c__c": "Periodontal Therapy",
+    //         "Procedure_Id__c": "PRTAP",
+    //         "Status_c__c": "Completed"
+    //     }
+    // ]
 
     console.log("Formatted response object:", formattedResponseObject);
 

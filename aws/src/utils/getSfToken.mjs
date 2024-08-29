@@ -106,7 +106,8 @@ export const getSfToken = async () => {
       fetchedSalesforceAccessToken = salesforceCrmResponseData.access_token;
 
       // save jwt token to dynamodb
-      const tokenExpiration = salesforceCrmResponseData.issued_at + 7200 * 1000;
+      const tokenExpiration =
+        +salesforceCrmResponseData.issued_at + 7200 * 1000;
 
       await dynamo.send(
         new PutCommand({

@@ -1,6 +1,5 @@
 /* global fetch */
 
-import jwt from "jsonwebtoken";
 import {
   SecretsManagerClient,
   GetSecretValueCommand,
@@ -75,31 +74,8 @@ export const getSfToken = async () => {
     ) {
       console.log("Token is expired. Fetching a new token!");
 
-      // define jwt payload
-      const tokenPayload = {
-        iss: secret.CLIENT_ID,
-        sub: secret.USERNAME,
-        aud: secret.LOGIN_URL,
-        exp: Math.round(Date.now() / 1000),
-      };
-
-      // decode base64 encoded rsa key from the AWS Secret Manager
-      const rsaKey = Buffer.from(secret.RSA_PRIVATE_KEY, "base64").toString(
-        "ascii"
-      );
-
-      // create and sign jwt
-      const token = jwt.sign(tokenPayload, rsaKey, {
-        algorithm: "RS256",
-      });
-
       // Salesforce CRM Access Token Payload
-      const salesforceCrmTokenPayload = new URLSearchParams({
-        grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-        assertion: token,
-      });
-
-      const newBody = new URLSearchParams({
+      const salesforceCrmAccessTokenPayload = new URLSearchParams({
         grant_type: "password",
         client_id: secret.CLIENT_ID,
         client_secret: secret.CLIENT_SECRET,
@@ -115,7 +91,7 @@ export const getSfToken = async () => {
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
           },
-          body: newBody,
+          body: salesforceCrmAccessTokenPayload,
         }
       );
 
@@ -130,8 +106,7 @@ export const getSfToken = async () => {
       fetchedSalesforceAccessToken = salesforceCrmResponseData.access_token;
 
       // save jwt token to dynamodb
-      const tokenExpiration =
-        salesforceCrmResponseData.issued_at + Math.round(Date.now() / 1000);
+      const tokenExpiration = salesforceCrmResponseData.issued_at + 7200 * 1000;
 
       await dynamo.send(
         new PutCommand({

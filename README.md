@@ -5,3 +5,20 @@
 <p/>
 
 # Data Cloud Data Graphs with Amazon Connect
+
+In this project, you will find an example of how to utilize Salesforce Data Cloud, specifically the Data Cloud [Data Graphs](https://help.salesforce.com/s/articleView?id=sf.c360_a_data_graphs.htm&type=5) to pull [Unified Profile information](https://help.salesforce.com/s/articleView?id=sf.c360_a_identity_resolution.htm&type=5) into the [Amazon Connect](https://aws.amazon.com/connect) [Agent Workspace](https://docs.aws.amazon.com/connect/latest/adminguide/agent-workspace.html).
+
+# Table of Contents
+
+- [Data Cloud Data Graphs with Amazon Connect](#data-cloud-data-graphs-with-amazon-connect)
+- [Table of Contents](#table-of-contents)
+- [License](#license)
+- [Disclaimer](#disclaimer)
+
+# License
+
+[MIT](http://www.opensource.org/licenses/mit-license.html)
+
+# Disclaimer
+
+This software is to be considered "sample code", a Type B Deliverable, and is delivered "as-is" to the user. Salesforce bears no responsibility to support the use or implementation of this software.

@@ -12,8 +12,18 @@ In this project, you will find an example of how to utilize Salesforce Data Clou
 
 - [Data Cloud Data Graphs with Amazon Connect](#data-cloud-data-graphs-with-amazon-connect)
 - [Table of Contents](#table-of-contents)
+  - [Technologies used](#technologies-used)
 - [License](#license)
 - [Disclaimer](#disclaimer)
+
+## Technologies used
+
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Node.js](https://nodejs.org/en)
+- [AWS](https://aws.amazon.com/)
+- [Amazon Connect](https://aws.amazon.com/connect/)
+
+For a more detailed overview of the development & production dependencies, please check `package.json`.
 
 # License
 

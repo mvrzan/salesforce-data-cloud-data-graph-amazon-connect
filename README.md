@@ -20,8 +20,12 @@ In this project, you will find an example of how to utilize Salesforce Data Clou
 
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Node.js](https://nodejs.org/en)
+- [Salesforce Data Cloud](https://www.salesforce.com/data/)
 - [AWS](https://aws.amazon.com/)
 - [Amazon Connect](https://aws.amazon.com/connect/)
+- [AWS Lambda](https://aws.amazon.com/lambda/)
+- [AWS DynamoDb](https://aws.amazon.com/dynamodb/)
+- [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
 
 For a more detailed overview of the development & production dependencies, please check `package.json`.
 

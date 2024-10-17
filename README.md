@@ -12,11 +12,19 @@ In this project, you will find an example of how to utilize Salesforce Data Clou
 
 - [Data Cloud Data Graphs with Amazon Connect](#data-cloud-data-graphs-with-amazon-connect)
 - [Table of Contents](#table-of-contents)
+  - [How does it work?](#how-does-it-work)
+    - [Architecture diagram](#architecture-diagram)
   - [Technologies used](#technologies-used)
 - [Configuration](#configuration)
   - [Requirements](#requirements)
 - [License](#license)
 - [Disclaimer](#disclaimer)
+
+## How does it work?
+
+### Architecture diagram
+
+![](./screenshots/architecture-diagram.png)
 
 ## Technologies used
 

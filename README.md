@@ -35,6 +35,21 @@ This capability opens up various use cases that can expose very specific dataset
 
 ![](./screenshots/architecture-diagram.png)
 
+The application flow is the following:
+
+- A caller calls an Amazon Connect phone number
+- The caller gets routed to an IVR (Interactive Voice Response) system
+- The IVR invokes a dedicated Lambda function
+- The Lambda function reads from a DynamoDB for the token value and expiration
+  - If the token has expired, it fetches sensitive environment variables from the Secrets Manager
+- The Lambda function fetches the Salesforce Access Token
+- The Lambda function caches the new token into DynamoDB
+- The Lambda function parses incoming IVR event and extracts the callers phone number
+- The Lambda function calls the Data Graph lookup endpoint by passing the parsed phone number
+- The Lambda function parses the Data Graph response payload
+- The Lambda function sends the parsed payload back to the IVR that invoked the Lambada
+- Amazon Connect's Contact Center Panel gets updated based on the incoming JSON payload
+
 ## Technologies used
 
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)

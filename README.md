@@ -12,6 +12,7 @@ In this project, you will find an example of how to utilize Salesforce Data Clou
 
 - [Data Cloud Data Graphs with Amazon Connect](#data-cloud-data-graphs-with-amazon-connect)
 - [Table of Contents](#table-of-contents)
+  - [What does it do?](#what-does-it-do)
   - [How does it work?](#how-does-it-work)
     - [Architecture diagram](#architecture-diagram)
   - [Technologies used](#technologies-used)
@@ -19,6 +20,14 @@ In this project, you will find an example of how to utilize Salesforce Data Clou
   - [Requirements](#requirements)
 - [License](#license)
 - [Disclaimer](#disclaimer)
+
+---
+
+## What does it do?
+
+Data Cloud has a feature called [Data Graphs](https://help.salesforce.com/s/articleView?id=sf.c360_a_data_graphs.htm&language=en_US&type=5). These Data Graphs combine and transform normalized table data from data model objects (DMOs) into new, materialized views of your data. Because the data is precalculated, you can make fewer calls, and queries respond in near real time.
+
+This capability opens up various use cases that can expose very specific dataset via a [REST API](https://developer.salesforce.com/docs/platform/connectapi/references/spec?meta=getDataGraphDataByLookup) and allow external applications outside of the Salesforce ecosystem to tap into that enriched data. In this particular scenario, this project demonstrates how the Amazon Contact center solution pulls the data from Data Cloud's Data Graph in order to enrich the Agents Contact Center Panel interface with caller-specific information.
 
 ## How does it work?
 

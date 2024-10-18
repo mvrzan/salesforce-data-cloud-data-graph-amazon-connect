@@ -1,0 +1,1206 @@
+{
+    "ssot__FormattedE164PhoneNumber__c": <TEXT>,
+    "ssot__Id__c": <TEXT>,
+    "UnifiedssotIndividualPat__dlm": [
+      {
+        "ssot__FirstName__c": <TEXT>,
+        "ssot__GenderId__c": <TEXT>,
+        "ssot__Id__c": <TEXT>,
+        "ssot__LastName__c": <TEXT>,
+        "ssot__YearlyIncomeRangeId__c": <TEXT>,
+        "State_Province__c": <TEXT>,
+        "UnifiedssotContactPointAddressPat__dlm": [
+          {
+            "ssot__AddressLine1__c": <TEXT>,
+            "ssot__CityId__c": <TEXT>,
+            "ssot__CountryId__c": <TEXT>,
+            "ssot__PostalCodeId__c": <TEXT>,
+            "ssot__StateProvinceId__c": <TEXT>
+          },
+          {
+            "ssot__AddressLine1__c": <TEXT>,
+            "ssot__CityId__c": <TEXT>,
+            "ssot__CountryId__c": <TEXT>,
+            "ssot__PostalCodeId__c": <TEXT>,
+            "ssot__StateProvinceId__c": <TEXT>
+          }
+        ],
+        "UnifiedssotContactPointEmailPat__dlm": [
+          {
+            "ssot__EmailAddress__c": <TEXT>
+          },
+          {
+            "ssot__EmailAddress__c": <TEXT>
+          }
+        ],
+        "UnifiedLinkssotIndividualPat__dlm": [
+          {
+            "KQ_SourceRecordId__c": <TEXT>,
+            "SourceRecordId__c": <TEXT>,
+            "UnifiedRecordId__c": <TEXT>,
+            "ssot__Individual__dlm": [
+              {
+                "KQ_Id__c": <TEXT>,
+                "ssot__Id__c": <TEXT>,
+                "ssot__EmailEngagement__dlm": [
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  },
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  }
+                ],
+                "Appointment__dlm": [
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  },
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  }
+                ],
+                "ssot__MessageEngagement__dlm": [
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductBrowseEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductOrderEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__WebsiteEngagement__dlm": [
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  },
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  }
+                ]
+              },
+              {
+                "KQ_Id__c": <TEXT>,
+                "ssot__Id__c": <TEXT>,
+                "ssot__EmailEngagement__dlm": [
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  },
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  }
+                ],
+                "Appointment__dlm": [
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  },
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  }
+                ],
+                "ssot__MessageEngagement__dlm": [
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductBrowseEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductOrderEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__WebsiteEngagement__dlm": [
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  },
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "KQ_SourceRecordId__c": <TEXT>,
+            "SourceRecordId__c": <TEXT>,
+            "UnifiedRecordId__c": <TEXT>,
+            "ssot__Individual__dlm": [
+              {
+                "KQ_Id__c": <TEXT>,
+                "ssot__Id__c": <TEXT>,
+                "ssot__EmailEngagement__dlm": [
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  },
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  }
+                ],
+                "Appointment__dlm": [
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  },
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  }
+                ],
+                "ssot__MessageEngagement__dlm": [
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductBrowseEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductOrderEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__WebsiteEngagement__dlm": [
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  },
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  }
+                ]
+              },
+              {
+                "KQ_Id__c": <TEXT>,
+                "ssot__Id__c": <TEXT>,
+                "ssot__EmailEngagement__dlm": [
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  },
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  }
+                ],
+                "Appointment__dlm": [
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  },
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  }
+                ],
+                "ssot__MessageEngagement__dlm": [
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductBrowseEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductOrderEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__WebsiteEngagement__dlm": [
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  },
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ssot__FirstName__c": <TEXT>,
+        "ssot__GenderId__c": <TEXT>,
+        "ssot__Id__c": <TEXT>,
+        "ssot__LastName__c": <TEXT>,
+        "ssot__YearlyIncomeRangeId__c": <TEXT>,
+        "State_Province__c": <TEXT>,
+        "UnifiedssotContactPointAddressPat__dlm": [
+          {
+            "ssot__AddressLine1__c": <TEXT>,
+            "ssot__CityId__c": <TEXT>,
+            "ssot__CountryId__c": <TEXT>,
+            "ssot__PostalCodeId__c": <TEXT>,
+            "ssot__StateProvinceId__c": <TEXT>
+          },
+          {
+            "ssot__AddressLine1__c": <TEXT>,
+            "ssot__CityId__c": <TEXT>,
+            "ssot__CountryId__c": <TEXT>,
+            "ssot__PostalCodeId__c": <TEXT>,
+            "ssot__StateProvinceId__c": <TEXT>
+          }
+        ],
+        "UnifiedssotContactPointEmailPat__dlm": [
+          {
+            "ssot__EmailAddress__c": <TEXT>
+          },
+          {
+            "ssot__EmailAddress__c": <TEXT>
+          }
+        ],
+        "UnifiedLinkssotIndividualPat__dlm": [
+          {
+            "KQ_SourceRecordId__c": <TEXT>,
+            "SourceRecordId__c": <TEXT>,
+            "UnifiedRecordId__c": <TEXT>,
+            "ssot__Individual__dlm": [
+              {
+                "KQ_Id__c": <TEXT>,
+                "ssot__Id__c": <TEXT>,
+                "ssot__EmailEngagement__dlm": [
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  },
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  }
+                ],
+                "Appointment__dlm": [
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  },
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  }
+                ],
+                "ssot__MessageEngagement__dlm": [
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductBrowseEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductOrderEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__WebsiteEngagement__dlm": [
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  },
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  }
+                ]
+              },
+              {
+                "KQ_Id__c": <TEXT>,
+                "ssot__Id__c": <TEXT>,
+                "ssot__EmailEngagement__dlm": [
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  },
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  }
+                ],
+                "Appointment__dlm": [
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  },
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  }
+                ],
+                "ssot__MessageEngagement__dlm": [
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductBrowseEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductOrderEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__WebsiteEngagement__dlm": [
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  },
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "KQ_SourceRecordId__c": <TEXT>,
+            "SourceRecordId__c": <TEXT>,
+            "UnifiedRecordId__c": <TEXT>,
+            "ssot__Individual__dlm": [
+              {
+                "KQ_Id__c": <TEXT>,
+                "ssot__Id__c": <TEXT>,
+                "ssot__EmailEngagement__dlm": [
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  },
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  }
+                ],
+                "Appointment__dlm": [
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  },
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  }
+                ],
+                "ssot__MessageEngagement__dlm": [
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductBrowseEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductOrderEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__WebsiteEngagement__dlm": [
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  },
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  }
+                ]
+              },
+              {
+                "KQ_Id__c": <TEXT>,
+                "ssot__Id__c": <TEXT>,
+                "ssot__EmailEngagement__dlm": [
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  },
+                  {
+                    "ssot__SubjectLineTxt__c": <TEXT>,
+                    "To_Email__c": <TEXT>,
+                    "Email_Send_Id__c": <TEXT>,
+                    "ssot__EmailName__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>
+                  }
+                ],
+                "Appointment__dlm": [
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  },
+                  {
+                    "Appointment_Time_c__c": <DATE>,
+                    "Contact_c__c": <TEXT>,
+                    "CreatedDate__c": <DATE>,
+                    "Id__c": <TEXT>,
+                    "Name__c": <TEXT>,
+                    "Procedure_c__c": <TEXT>,
+                    "Procedure_Id__c": <TEXT>,
+                    "Status_c__c": <TEXT>
+                  }
+                ],
+                "ssot__MessageEngagement__dlm": [
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "KQ_Id__c": <TEXT>,
+                    "SMS_Send_ID__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__EngagementTypeId__c": <TEXT>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__KeywordText__c": <TEXT>,
+                    "ssot__KeywordTxt__c": <TEXT>,
+                    "ssot__Name__c": <TEXT>,
+                    "ssot__SendTimePhoneNumber__c": <TEXT>,
+                    "ssot__SentDateTm__c": <DATE>,
+                    "Tempate_Name__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductBrowseEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__IndividualId__c": <TEXT>,
+                    "ssot__ProductId__c": <TEXT>,
+                    "ssot__ProductViewURL__c": <TEXT>
+                  }
+                ],
+                "ssot__ProductOrderEngagement__dlm": [
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  },
+                  {
+                    "ssot__CreatedDate__c": <DATE>,
+                    "ssot__CurrencyId__c": <TEXT>,
+                    "ssot__EngagementChannelActionId__c": <TEXT>,
+                    "ssot__EngagementChannelTypeId__c": <TEXT>,
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "ssot__NetOrderAmount__c": <NUMBER>,
+                    "ssot__SalesOrderId__c": <TEXT>,
+                    "KQ_IndividualId__c": <TEXT>
+                  }
+                ],
+                "ssot__WebsiteEngagement__dlm": [
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  },
+                  {
+                    "ssot__EngagementDateTm__c": <DATE>,
+                    "ssot__Id__c": <TEXT>,
+                    "Webpage_Category__c": <TEXT>,
+                    "ssot__WebCookieId__c": <TEXT>
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

@@ -15,6 +15,8 @@ In this project, you will find an example of how to utilize Salesforce Data Clou
   - [What does it do?](#what-does-it-do)
   - [How does it work?](#how-does-it-work)
     - [Architecture diagram](#architecture-diagram)
+  - [Feature demo](#feature-demo)
+  - [Amazon Connect Contact Center Panel (CCP)](#amazon-connect-contact-center-panel-ccp)
   - [Technologies used](#technologies-used)
 - [Configuration](#configuration)
   - [Requirements](#requirements)
@@ -49,6 +51,10 @@ The application flow is the following:
 - The Lambda function parses the Data Graph response payload
 - The Lambda function sends the parsed payload back to the IVR that invoked the Lambada
 - Amazon Connect's Contact Center Panel gets updated based on the incoming JSON payload
+
+## Feature demo
+
+## Amazon Connect Contact Center Panel (CCP)
 
 ## Technologies used
 

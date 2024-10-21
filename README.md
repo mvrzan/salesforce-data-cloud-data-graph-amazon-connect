@@ -84,13 +84,13 @@ For a more detailed overview of the development & production dependencies, pleas
 
 ## Ok, how do I re-create this myself, then?
 
-In order to re-create this out, you will need several things:
+In order to re-create this out, you will need the following:
 
 - A valid [AWS account](https://aws.amazon.com/)
 - A deployed [Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-get-started.html) instance
 - A Salesforce account with [Data Cloud](https://www.salesforce.com/data/) deployed and all the data mapped
 - A [Basic Connected App](https://help.salesforce.com/s/articleView?id=sf.connected_app_create_basics.htm&type=5) within Salesforce
-- [Enable Oauth settings for the API integration](https://help.salesforce.com/s/articleView?id=sf.connected_app_create_api_integration.htm&type=5)
+  - [Enabled Oauth settings for the API integration](https://help.salesforce.com/s/articleView?id=sf.connected_app_create_api_integration.htm&type=5)
 - Created [Data Cloud Data Graph](https://help.salesforce.com/s/articleView?id=sf.c360_a_data_graphs.htm&language=en_US&type=5) with the desired data (you can use the existing [schema](./data-graph-schema/dataGraphSchema.json) for guidance)
 - Update the [Lambda function](./aws/src/utils/parseDataGraph.mjs) to parse the data based on your Data Graph
 - An assigned Amazon Connect [phone number](https://docs.aws.amazon.com/connect/latest/adminguide/ag-overview-numbers.html)

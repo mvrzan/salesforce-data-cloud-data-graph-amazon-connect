@@ -1,0 +1,467 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "Play welcome message",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 37.6,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "End the call": {
+        "position": {
+          "x": 998.4,
+          "y": 469.6
+        },
+        "isFriendlyName": true
+      },
+      "Input timeout": {
+        "position": {
+          "x": 207.2,
+          "y": 418.4
+        },
+        "isFriendlyName": true
+      },
+      "Error block": {
+        "position": {
+          "x": 720.8,
+          "y": 420
+        },
+        "isFriendlyName": true
+      },
+      "Annoyed block": {
+        "position": {
+          "x": 720,
+          "y": 225.6
+        },
+        "isFriendlyName": true
+      },
+      "Play welcome message": {
+        "position": {
+          "x": 172.8,
+          "y": 21.6
+        },
+        "isFriendlyName": true
+      },
+      "Get customer input": {
+        "position": {
+          "x": 446.4,
+          "y": 19.2
+        },
+        "isFriendlyName": true,
+        "conditionMetadata": [
+          {
+            "id": "7df42995-c248-4531-81a0-4ac158165de7",
+            "value": "1"
+          },
+          {
+            "id": "cd77ca28-3232-4a5e-b235-e35f5443979d",
+            "value": "2"
+          }
+        ]
+      },
+      "Demo time": {
+        "position": {
+          "x": 720.8,
+          "y": 18.4
+        },
+        "isFriendlyName": true
+      },
+      "End the demo flow": {
+        "position": {
+          "x": 3039.2,
+          "y": 201.6
+        },
+        "isFriendlyName": true
+      },
+      "Transfer to basic queue": {
+        "position": {
+          "x": 2800,
+          "y": 156
+        },
+        "isFriendlyName": true
+      },
+      "Set basic queue": {
+        "position": {
+          "x": 2537.6,
+          "y": 120.8
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "QueueId": {
+            "displayName": "BasicQueue"
+          }
+        },
+        "queue": {
+          "text": "BasicQueue"
+        }
+      },
+      "Lambda error": {
+        "position": {
+          "x": 1271.2,
+          "y": 272.8
+        },
+        "isFriendlyName": true
+      },
+      "301ceb83-d417-40c2-b25b-04fc410c0c94": {
+        "position": {
+          "x": 2272.8,
+          "y": 118.4
+        },
+        "parameters": {
+          "EventHooks": {
+            "DefaultAgentUI": {
+              "displayName": "Invoke Data Graph View"
+            }
+          }
+        }
+      },
+      "Invoke dc-dg-function": {
+        "position": {
+          "x": 1017.6,
+          "y": 17.6
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "LambdaFunctionARN": {
+            "displayName": "dc-dg-function"
+          }
+        },
+        "dynamicMetadata": {}
+      },
+      "242f95fd-6c4e-4e55-91d0-a30bd48e51af": {
+        "position": {
+          "x": 1537.6,
+          "y": 136.8
+        }
+      },
+      "Lambda success": {
+        "position": {
+          "x": 1740,
+          "y": -86.4
+        },
+        "isFriendlyName": true
+      },
+      "Set Lambda Values": {
+        "position": {
+          "x": 1269.6,
+          "y": -32
+        },
+        "isFriendlyName": true,
+        "dynamicParams": []
+      }
+    },
+    "Annotations": [],
+    "name": "Data Cloud data graph lookup",
+    "description": "An example flow to demo a Data Cloud Data Graph lookup based on the incoming phone number.",
+    "type": "contactFlow",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "End the call",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Text": "Buddy, you have to press something... Try again, please."
+      },
+      "Identifier": "Input timeout",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "Get customer input",
+        "Errors": [
+          {
+            "NextAction": "Get customer input",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Looks like there was a problem with your input. Have a nice day!"
+      },
+      "Identifier": "Error block",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "End the call",
+        "Errors": [
+          {
+            "NextAction": "End the call",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Sorry to hear that... Have a nice day!"
+      },
+      "Identifier": "Annoyed block",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "End the call",
+        "Errors": [
+          {
+            "NextAction": "End the call",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Welcome to a Data Cloud data graph demo."
+      },
+      "Identifier": "Play welcome message",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "Get customer input",
+        "Errors": [
+          {
+            "NextAction": "Get customer input",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "5",
+        "Text": "Please press 1 for the demo or 2 if you are annoyed."
+      },
+      "Identifier": "Get customer input",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "Demo time",
+        "Conditions": [
+          {
+            "NextAction": "Demo time",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "1"
+              ]
+            }
+          },
+          {
+            "NextAction": "Annoyed block",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "2"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "Input timeout",
+            "ErrorType": "InputTimeLimitExceeded"
+          },
+          {
+            "NextAction": "Demo time",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "Error block",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Excellent choice! I will invoke a Lambda function now to get your information based on the incoming phone number and I will put you in the queue. Hold tight!"
+      },
+      "Identifier": "Demo time",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "Invoke dc-dg-function",
+        "Errors": [
+          {
+            "NextAction": "Invoke dc-dg-function",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "End the demo flow",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {},
+      "Identifier": "Transfer to basic queue",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "End the demo flow",
+        "Errors": [
+          {
+            "NextAction": "End the demo flow",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "End the demo flow",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-east-1:730335224080:instance/172733c6-85f7-458f-8a3a-6f4fc6f2074e/queue/2233e48e-f7c2-4085-86c0-785fba3b9ad4"
+      },
+      "Identifier": "Set basic queue",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "Transfer to basic queue",
+        "Errors": [
+          {
+            "NextAction": "Transfer to basic queue",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "There was an error with the Lambda function invocation, but proceeding to the queue."
+      },
+      "Identifier": "Lambda error",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "301ceb83-d417-40c2-b25b-04fc410c0c94",
+        "Errors": [
+          {
+            "NextAction": "301ceb83-d417-40c2-b25b-04fc410c0c94",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "EventHooks": {
+          "DefaultAgentUI": "arn:aws:connect:us-east-1:730335224080:instance/172733c6-85f7-458f-8a3a-6f4fc6f2074e/contact-flow/5fdee929-fc69-4b6c-8e10-d974e9cffd08"
+        }
+      },
+      "Identifier": "301ceb83-d417-40c2-b25b-04fc410c0c94",
+      "Type": "UpdateContactEventHooks",
+      "Transitions": {
+        "NextAction": "Set basic queue",
+        "Errors": [
+          {
+            "NextAction": "Set basic queue",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:730335224080:function:dc-dg-function",
+        "InvocationTimeLimitSeconds": "8",
+        "ResponseValidation": {
+          "ResponseType": "JSON"
+        }
+      },
+      "Identifier": "Invoke dc-dg-function",
+      "Type": "InvokeLambdaFunction",
+      "Transitions": {
+        "NextAction": "Set Lambda Values",
+        "Errors": [
+          {
+            "NextAction": "Lambda error",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Error setting attributes"
+      },
+      "Identifier": "242f95fd-6c4e-4e55-91d0-a30bd48e51af",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "Lambda success",
+        "Errors": [
+          {
+            "NextAction": "Lambda success",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Lambda invocation was successful! "
+      },
+      "Identifier": "Lambda success",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "301ceb83-d417-40c2-b25b-04fc410c0c94",
+        "Errors": [
+          {
+            "NextAction": "301ceb83-d417-40c2-b25b-04fc410c0c94",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "firstName": "$.External.firstName",
+          "lastName": "$.External.lastName",
+          "emailAddress": "$.External.emailAddress",
+          "phoneNumber": "$.External.phoneNumber",
+          "yearlyIncome": "$.External.yearlyIncome",
+          "address": "$.External.address",
+          "city": "$.External.city",
+          "country": "$.External.country",
+          "postalCode": "$.External.postalCode",
+          "state": "$.External.state",
+          "websiteEngagementDate": "$.External.websiteEngagement.engagementDate",
+          "websiteEngagementCategory": "$.External.websiteEngagement.webPageCategory",
+          "smsEngagementDate": "$.External.smsEngagement.engagementDate",
+          "smsEngagementType": "$.External.smsEngagement.engagementType",
+          "smsEngagementKeywordText": "$.External.smsEngagement.keywordText",
+          "smsEngagementName": "$.External.smsEngagement.smsName",
+          "smsSendTimePhoneNumber": "$.External.smsEngagement.sendTimePhoneNumber",
+          "smsEngagementSentDate": "$.External.smsEngagement.sentDate",
+          "emailEngagementDate": "$.External.emailEngagement.engagementDate",
+          "emailEngagementEmailSubject": "$.External.emailEngagement.emailSubject",
+          "emailEngagementEmailName": "$.External.emailEngagement.emailName",
+          "emailEngagementEngagementType": "$.External.emailEngagement.engagementType",
+          "emailEngagementEmailSentDate": "$.External.emailEngagement.emailSentDate",
+          "appointmentTime": "$.External.latestAppointment.appointmentTime",
+          "appointmentCreatedDate": "$.External.latestAppointment.createdDate",
+          "appointmentName": "$.External.latestAppointment.name",
+          "appointmentProcedure": "$.External.latestAppointment.procedure",
+          "appointmentProcedureId": "$.External.latestAppointment.procedureId",
+          "appointmentStatus": "$.External.latestAppointment.status"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "Set Lambda Values",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "Lambda success",
+        "Errors": [
+          {
+            "NextAction": "242f95fd-6c4e-4e55-91d0-a30bd48e51af",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,566 @@
+{
+  "type": "object",
+  "properties": {
+    "AttributeSection_1729269062994": {
+      "properties": {
+        "Items": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "Label": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "Value": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "LinkType": {
+                        "anyOf": [
+                          {
+                            "enum": [
+                              "case",
+                              "external",
+                              "third-party applications"
+                            ]
+                          }
+                        ]
+                      },
+                      "AutoOpen": {
+                        "anyOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "enum": ["true", "false"]
+                          }
+                        ]
+                      },
+                      "Url": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          }
+                        ]
+                      },
+                      "ResourceId": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "Copyable": {
+                        "anyOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "enum": ["true", "false"]
+                          }
+                        ]
+                      },
+                      "ApplicationName": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          }
+                        ]
+                      }
+                    },
+                    "required": ["Label", "Value"],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "required": ["Items"]
+    },
+    "AttributeSection_1729277321262": {
+      "properties": {
+        "Items": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "Label": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "Value": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "LinkType": {
+                        "anyOf": [
+                          {
+                            "enum": [
+                              "case",
+                              "external",
+                              "third-party applications"
+                            ]
+                          }
+                        ]
+                      },
+                      "AutoOpen": {
+                        "anyOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "enum": ["true", "false"]
+                          }
+                        ]
+                      },
+                      "Url": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          }
+                        ]
+                      },
+                      "ResourceId": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "Copyable": {
+                        "anyOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "enum": ["true", "false"]
+                          }
+                        ]
+                      },
+                      "ApplicationName": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          }
+                        ]
+                      }
+                    },
+                    "required": ["Label", "Value"],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "required": ["Items"]
+    },
+    "AttributeSection_1729277625900": {
+      "properties": {
+        "Items": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "Label": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "Value": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "LinkType": {
+                        "anyOf": [
+                          {
+                            "enum": [
+                              "case",
+                              "external",
+                              "third-party applications"
+                            ]
+                          }
+                        ]
+                      },
+                      "AutoOpen": {
+                        "anyOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "enum": ["true", "false"]
+                          }
+                        ]
+                      },
+                      "Url": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          }
+                        ]
+                      },
+                      "ResourceId": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "Copyable": {
+                        "anyOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "enum": ["true", "false"]
+                          }
+                        ]
+                      },
+                      "ApplicationName": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          }
+                        ]
+                      }
+                    },
+                    "required": ["Label", "Value"],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "required": ["Items"]
+    },
+    "AttributeSection_1729278165298": {
+      "properties": {
+        "Items": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "Label": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "Value": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "LinkType": {
+                        "anyOf": [
+                          {
+                            "enum": [
+                              "case",
+                              "external",
+                              "third-party applications"
+                            ]
+                          }
+                        ]
+                      },
+                      "AutoOpen": {
+                        "anyOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "enum": ["true", "false"]
+                          }
+                        ]
+                      },
+                      "Url": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          }
+                        ]
+                      },
+                      "ResourceId": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "Copyable": {
+                        "anyOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "enum": ["true", "false"]
+                          }
+                        ]
+                      },
+                      "ApplicationName": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          }
+                        ]
+                      }
+                    },
+                    "required": ["Label", "Value"],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "required": ["Items"]
+    },
+    "AttributeSection_1729278166918": {
+      "properties": {
+        "Items": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "Label": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "Value": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "LinkType": {
+                        "anyOf": [
+                          {
+                            "enum": [
+                              "case",
+                              "external",
+                              "third-party applications"
+                            ]
+                          }
+                        ]
+                      },
+                      "AutoOpen": {
+                        "anyOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "enum": ["true", "false"]
+                          }
+                        ]
+                      },
+                      "Url": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          }
+                        ]
+                      },
+                      "ResourceId": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          },
+                          {
+                            "type": "number"
+                          }
+                        ]
+                      },
+                      "Copyable": {
+                        "anyOf": [
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "enum": ["true", "false"]
+                          }
+                        ]
+                      },
+                      "ApplicationName": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "pattern": "^$|^(?!\\$\\.).+"
+                          }
+                        ]
+                      }
+                    },
+                    "required": ["Label", "Value"],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "required": ["Items"]
+    }
+  },
+  "required": [
+    "AttributeSection_1729269062994",
+    "AttributeSection_1729277321262",
+    "AttributeSection_1729277625900",
+    "AttributeSection_1729278165298",
+    "AttributeSection_1729278166918"
+  ],
+  "$defs": {
+    "ViewCondition": {
+      "$id": "/view/condition",
+      "type": "object",
+      "patternProperties": {
+        "^(MoreThan|LessThan|NotEqual|Equal|Include)$": {
+          "type": "object",
+          "properties": {
+            "ElementByKey": {
+              "type": "string"
+            },
+            "ElementByValue": {
+              "anyOf": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "^(AndConditions|OrConditions)$": {
+          "type": "array",
+          "items": {
+            "$ref": "/view/condition"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

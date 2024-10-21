@@ -19,7 +19,7 @@ In this project, you will find an example of how to utilize Salesforce Data Clou
   - [Amazon Connect Workspace (custom view)](#amazon-connect-workspace-custom-view)
   - [Technologies used](#technologies-used)
 - [Configuration](#configuration)
-  - [Requirements](#requirements)
+  - [Great, can I test this exact setup myself?](#great-can-i-test-this-exact-setup-myself)
 - [License](#license)
 - [Disclaimer](#disclaimer)
 
@@ -73,16 +73,13 @@ For a more detailed overview of the development & production dependencies, pleas
 
 # Configuration
 
-## Requirements
+## Great, can I test this exact setup myself?
 
-In order to test this out, you will need several things:
+**No.** This project servers as an example of how Data Cloud Data Graphs can be used with Amazon Connect. The reason why this can't be just deployed and test is due to several reasons:
 
-- A valid [AWS account](https://aws.amazon.com/)
-- A deployed [Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-get-started.html) instance
-- A Salesforce account with [Data Cloud](https://www.salesforce.com/data/) deployed
-- A [Basic Connected App](https://help.salesforce.com/s/articleView?id=sf.connected_app_create_basics.htm&type=5) within Salesforce
-- [Enable Oauth settings for the API integration](https://help.salesforce.com/s/articleView?id=sf.connected_app_create_api_integration.htm&type=5)
-- Created [Data Cloud Data Graph](https://help.salesforce.com/s/articleView?id=sf.c360_a_data_graphs.htm&language=en_US&type=5) with the desired data
+- I would have to share the entire Data Cloud data model including data transformations and identity resolution rulesets
+- The Data Graph would have to be recreated exactly according to the provided [schema](./data-graph-schema/dataGraphSchema.json)
+- The parsing logic in the [Lambda function](./aws/src/utils/parseDataGraph.mjs) is create to parse for specific data points that are being returned by the Data Graph
 
 # License
 

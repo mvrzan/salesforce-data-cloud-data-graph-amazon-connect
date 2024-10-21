@@ -16,7 +16,7 @@ In this project, you will find an example of how to utilize Salesforce Data Clou
   - [How does it work?](#how-does-it-work)
     - [Architecture diagram](#architecture-diagram)
   - [Feature demo](#feature-demo)
-  - [Amazon Connect Contact Center Panel (CCP)](#amazon-connect-contact-center-panel-ccp)
+  - [Amazon Connect Workspace (custom view)](#amazon-connect-workspace-custom-view)
   - [Technologies used](#technologies-used)
 - [Configuration](#configuration)
   - [Requirements](#requirements)
@@ -56,7 +56,7 @@ The application flow is the following:
 
 ## Feature demo
 
-## Amazon Connect Contact Center Panel (CCP)
+## Amazon Connect Workspace (custom view)
 
 ## Technologies used
 

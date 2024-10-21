@@ -20,6 +20,7 @@ In this project, you will find an example of how to utilize Salesforce Data Clou
   - [Technologies used](#technologies-used)
 - [Configuration](#configuration)
   - [Great, can I test this exact setup myself?](#great-can-i-test-this-exact-setup-myself)
+  - [Ok, how do I re-create this myself, then?](#ok-how-do-i-re-create-this-myself-then)
 - [License](#license)
 - [Disclaimer](#disclaimer)
 
@@ -75,11 +76,26 @@ For a more detailed overview of the development & production dependencies, pleas
 
 ## Great, can I test this exact setup myself?
 
-**No.** This project servers as an example of how Data Cloud Data Graphs can be used with Amazon Connect. The reason why this can't be just deployed and test is due to several reasons:
+**No.** This project servers as an example of how Data Cloud Data Graphs can be used with Amazon Connect. The reason why this can't be just deployed and tested is due to the following:
 
 - I would have to share the entire Data Cloud data model including data transformations and identity resolution rulesets
 - The Data Graph would have to be recreated exactly according to the provided [schema](./data-graph-schema/dataGraphSchema.json)
 - The parsing logic in the [Lambda function](./aws/src/utils/parseDataGraph.mjs) is create to parse for specific data points that are being returned by the Data Graph
+
+## Ok, how do I re-create this myself, then?
+
+In order to re-create this out, you will need several things:
+
+- A valid [AWS account](https://aws.amazon.com/)
+- A deployed [Amazon Connect](https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-get-started.html) instance
+- A Salesforce account with [Data Cloud](https://www.salesforce.com/data/) deployed and all the data mapped
+- A [Basic Connected App](https://help.salesforce.com/s/articleView?id=sf.connected_app_create_basics.htm&type=5) within Salesforce
+- [Enable Oauth settings for the API integration](https://help.salesforce.com/s/articleView?id=sf.connected_app_create_api_integration.htm&type=5)
+- Created [Data Cloud Data Graph](https://help.salesforce.com/s/articleView?id=sf.c360_a_data_graphs.htm&language=en_US&type=5) with the desired data (you can use the existing [schema](./data-graph-schema/dataGraphSchema.json) for guidance)
+- Update the [Lambda function](./aws/src/utils/parseDataGraph.mjs) to parse the data based on your Data Graph
+- An assigned Amazon Connect [phone number](https://docs.aws.amazon.com/connect/latest/adminguide/ag-overview-numbers.html)
+- A custom Agent Workspace view ([example view](./amazon-connect/custom-view-schema.json))
+- An [Amazon Connect Contact Flow](https://docs.aws.amazon.com/connect/latest/adminguide/connect-contact-flows.html) ([example Contact Flow](./amazon-connect/data-cloud-data-graph-lookup.json))
 
 # License
 

@@ -50,7 +50,9 @@ The application flow is the following:
 - The Lambda function calls the Data Graph lookup endpoint by passing the parsed phone number
 - The Lambda function parses the Data Graph response payload
 - The Lambda function sends the parsed payload back to the IVR that invoked the Lambada
-- Amazon Connect's Contact Center Panel gets updated based on the incoming JSON payload
+- The Contact Flow (IVR) parses the incoming JSON into contact attributes
+- The Contact Flow (IVR) invokes a custom view and passes the parsed contact attributes
+- Amazon Connect's Agent Workspace gets updated based on the incoming JSON payload
 
 ## Feature demo
 

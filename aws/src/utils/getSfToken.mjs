@@ -1,14 +1,7 @@
 /* global fetch */
 
-import {
-  SecretsManagerClient,
-  GetSecretValueCommand,
-} from "@aws-sdk/client-secrets-manager";
-import {
-  DynamoDBDocumentClient,
-  ScanCommand,
-  PutCommand,
-} from "@aws-sdk/lib-dynamodb";
+import { SecretsManagerClient, GetSecretValueCommand } from "@aws-sdk/client-secrets-manager";
+import { DynamoDBDocumentClient, ScanCommand, PutCommand } from "@aws-sdk/lib-dynamodb";
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 
 // create global variables for cache
@@ -26,7 +19,7 @@ const tableName = process.env.DYNAMODB_TABLE_NAME;
 // initialize AWS Secrets Manager client
 const secret_name = process.env.SECRET_NAME;
 const client = new SecretsManagerClient({
-  region: "us-east-1",
+  region: process.env.SECRET_REGION,
 });
 
 export const getSfToken = async () => {
@@ -68,10 +61,7 @@ export const getSfToken = async () => {
     }
 
     // check if the token is still valid
-    if (
-      !cachedJwtExpiresAt ||
-      cachedJwtExpiresAt - Math.round(Date.now() / 1000) < 5400
-    ) {
+    if (!cachedJwtExpiresAt || cachedJwtExpiresAt - Math.round(Date.now() / 1000) < 5400) {
       console.log("Token is expired. Fetching a new token!");
 
       // Salesforce CRM Access Token Payload
@@ -84,16 +74,13 @@ export const getSfToken = async () => {
       });
 
       // Salesforce CRM Access Token Request
-      const salesforceCrmResponse = await fetch(
-        `https://${secret.CDP_INSTANCE_URL}/services/oauth2/token`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-          body: salesforceCrmAccessTokenPayload,
-        }
-      );
+      const salesforceCrmResponse = await fetch(`https://${secret.CDP_INSTANCE_URL}/services/oauth2/token`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: salesforceCrmAccessTokenPayload,
+      });
 
       if (!salesforceCrmResponse.ok) {
         throw new Error("HTTP error, status = " + salesforceCrmResponse.status);
@@ -106,8 +93,7 @@ export const getSfToken = async () => {
       fetchedSalesforceAccessToken = salesforceCrmResponseData.access_token;
 
       // save jwt token to dynamodb
-      const tokenExpiration =
-        +salesforceCrmResponseData.issued_at + 7200 * 1000;
+      const tokenExpiration = +salesforceCrmResponseData.issued_at + 7200 * 1000;
 
       await dynamo.send(
         new PutCommand({
@@ -134,9 +120,7 @@ export const getSfToken = async () => {
     console.error("Error has occurred:", error);
     const errorResponse = {
       statusCode: 500,
-      body: JSON.stringify(
-        `There was an issue with the Lambda helper function: ${error}`
-      ),
+      body: JSON.stringify(`There was an issue with the Lambda helper function: ${error}`),
     };
 
     return errorResponse;

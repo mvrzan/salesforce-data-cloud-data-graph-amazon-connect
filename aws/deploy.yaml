@@ -1,0 +1,94 @@
+Transform: "AWS::Serverless-2016-10-31"
+Resources:
+  DataCloudDataGraphRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Principal:
+              Service: "lambda.amazonaws.com"
+            Action: "sts:AssumeRole"
+      Policies:
+        - PolicyName: "DataCloudDataGraphPolicy"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: "Allow"
+                Action:
+                  - "secretsmanager:GetSecretValue"
+                Resource: !Ref DataCloudSecretsManagerSecret
+              - Effect: "Allow"
+                Action:
+                  - "dynamodb:GetItem"
+                  - "dynamodb:PutItem"
+                  - "dynamodb:UpdateItem"
+                  - "dynamodb:Scan"
+                Resource: !GetAtt DataCloudDynamoDBTable.Arn
+              - Effect: "Allow"
+                Action:
+                  - "lambda:InvokeFunction"
+                Resource: "*"
+              - Effect: "Allow"
+                "Action":
+                  - "logs:CreateLogGroup"
+                  - "logs:CreateLogStream"
+                  - "logs:PutLogEvents"
+                Resource: "*"
+
+  DataCloudDataGraphLookupFunction:
+    Type: "AWS::Serverless::Function"
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs20.x
+      CodeUri: .
+      MemorySize: 128
+      Timeout: 30
+      Role: !GetAtt DataCloudDataGraphRole.Arn
+      Environment:
+        Variables:
+          SECRET_NAME: !Ref DataCloudSecretsManagerSecret
+          DYNAMODB_TABLE_NAME: !Ref DataCloudDynamoDBTable
+          SECRET_REGION: !Ref AWS::Region
+
+  DataCloudDynamoDBTable:
+    Type: "AWS::DynamoDB::Table"
+    Properties:
+      TableName: !Sub "data-cloud-data-graph-${AWS::StackName}"
+      AttributeDefinitions:
+        - AttributeName: "jwt"
+          AttributeType: "S"
+      KeySchema:
+        - AttributeName: "jwt"
+          KeyType: "HASH"
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+
+  DataCloudSecretsManagerSecret:
+    Type: "AWS::SecretsManager::Secret"
+    Properties:
+      Name: !Sub "data-cloud-data-graph-${AWS::StackName}"
+      Description: "Secrets for Data Cloud"
+      SecretString: !Sub |
+        {
+          "CLIENT_ID": "2MO_w2n1AqT7ItBzfdas342fdasf897fdas",
+          "USERNAME": "john.doe@example.com",
+          "LOGIN_URL": "login.salesforce.com",
+          "RSA_PRIVATE_KEY": "V3Q2RQZm93eGFvZW13Vys5OGFnQ1dCQTErZGlNMTkrc...",
+          "INGESTION_SOURCE_API_NAME": "test-api"
+        }
+
+Outputs:
+  DataCloudDataGraphLookupFunctionArn:
+    Description: "ARN of the Data Cloud Notification Lambda Function"
+    Value: !GetAtt DataCloudDataGraphLookupFunction.Arn
+
+  DataCloudDynamoDBTableName:
+    Description: "Name of the created DynamoDB table"
+    Value: !Ref DataCloudDynamoDBTable
+
+  DataCloudSecretsManagerSecretArn:
+    Description: "ARN of the Secrets Manager secret"
+    Value: !Ref DataCloudSecretsManagerSecret

@@ -63,6 +63,8 @@ The application flow is the following:
 
 ## Amazon Connect Workspace (custom view)
 
+![](./screenshots/agent-workspace-custom-view.png)
+
 ## Technologies used
 
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)

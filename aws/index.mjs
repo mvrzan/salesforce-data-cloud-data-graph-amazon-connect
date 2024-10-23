@@ -1,7 +1,7 @@
 /* global fetch */
 
-import { getSfToken } from "./utils/getSfToken.mjs";
-import { parseDataGraph } from "./utils/parseDataGraph.mjs";
+import { getSfToken } from "./src/utils/getSfToken.mjs";
+import { parseDataGraph } from "./src/utils/parseDataGraph.mjs";
 
 export const handler = async (event) => {
   try {
@@ -14,33 +14,25 @@ export const handler = async (event) => {
     const dataCloudDataGraphLookupUrl = `${salesforceInstanceUrl}/services/data/v61.0/ssot/data-graphs/data/UC_phone_number_lookup?lookupKeys=ssot__FormattedE164PhoneNumber__c=241.572.2605`;
 
     // Send data to Data Cloud Data Graph lookup API
-    const dataCloudDataGraphLookupResponse = await fetch(
-      dataCloudDataGraphLookupUrl,
-      {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const dataCloudDataGraphLookupResponse = await fetch(dataCloudDataGraphLookupUrl, {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    });
 
     // Check if the response is not successful
     if (!dataCloudDataGraphLookupResponse.ok) {
       const status = dataCloudDataGraphLookupResponse.status;
       const errorText = dataCloudDataGraphLookupResponse.statusText;
       console.error("Data Cloud Data Graph error:", errorText);
-      throw new Error(
-        `HTTP error when fetching data from the Data Cloud Data Graph, status = ${status}`
-      );
+      throw new Error(`HTTP error when fetching data from the Data Cloud Data Graph, status = ${status}`);
     }
 
-    const dataCloudDataGraphLookupResponseData =
-      await dataCloudDataGraphLookupResponse.json();
+    const dataCloudDataGraphLookupResponseData = await dataCloudDataGraphLookupResponse.json();
 
-    const formattedDataGraphObject = parseDataGraph(
-      dataCloudDataGraphLookupResponseData
-    );
+    const formattedDataGraphObject = parseDataGraph(dataCloudDataGraphLookupResponseData);
 
     console.log("Formatted response object:", formattedDataGraphObject);
 
@@ -49,9 +41,7 @@ export const handler = async (event) => {
     console.error("Error has occurred:", error);
     const errorResponse = {
       statusCode: 500,
-      body: JSON.stringify(
-        `There was an issue with the Lambda function: ${error}`
-      ),
+      body: JSON.stringify(`There was an issue with the Lambda function: ${error}`),
     };
 
     return errorResponse;

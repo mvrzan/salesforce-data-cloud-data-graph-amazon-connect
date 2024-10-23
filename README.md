@@ -211,6 +211,8 @@ This step will guide you through the deployment and ask the following questions:
 
 That is it! You have successfully deployed the aforementioned resources into an AWS account using SAM. Once this is done, you will fined the appropriate resources created within your AWS account.
 
+> Please note that this does not include the Amazon Connect deployment. Why? I was too lazy to include that.
+
 # License
 
 [MIT](http://www.opensource.org/licenses/mit-license.html)

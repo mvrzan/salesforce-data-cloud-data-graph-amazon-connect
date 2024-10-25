@@ -19,10 +19,10 @@ export const parseDataGraph = (dataGraph) => {
 
   const websiteEngagement = {
     engagementDate:
-      individualWebsiteEngagementData.ssot__Individual__dlm[0].ssot__WebsiteEngagement__dlm[0]
+      individualWebsiteEngagementData?.ssot__Individual__dlm[0].ssot__WebsiteEngagement__dlm[0]
         .ssot__EngagementDateTm__c,
     webPageCategory:
-      individualWebsiteEngagementData.ssot__Individual__dlm[0].ssot__WebsiteEngagement__dlm[0].Webpage_Category__c,
+      individualWebsiteEngagementData?.ssot__Individual__dlm[0].ssot__WebsiteEngagement__dlm[0].Webpage_Category__c,
   };
 
   // email engagement data
@@ -32,14 +32,14 @@ export const parseDataGraph = (dataGraph) => {
 
   const emailEngagement = {
     engagementDate:
-      individualEmailEngagementData.ssot__Individual__dlm[0].ssot__EmailEngagement__dlm[0].ssot__EngagementDateTm__c,
+      individualEmailEngagementData?.ssot__Individual__dlm[0].ssot__EmailEngagement__dlm[0].ssot__EngagementDateTm__c,
     emailSubject:
-      individualEmailEngagementData.ssot__Individual__dlm[0].ssot__EmailEngagement__dlm[0].ssot__SubjectLineTxt__c,
-    emailName: individualEmailEngagementData.ssot__Individual__dlm[0].ssot__EmailEngagement__dlm[0].ssot__EmailName__c,
+      individualEmailEngagementData?.ssot__Individual__dlm[0].ssot__EmailEngagement__dlm[0].ssot__SubjectLineTxt__c,
+    emailName: individualEmailEngagementData?.ssot__Individual__dlm[0].ssot__EmailEngagement__dlm[0].ssot__EmailName__c,
     engagementType:
-      individualEmailEngagementData.ssot__Individual__dlm[0].ssot__EmailEngagement__dlm[0].ssot__EngagementTypeId__c,
+      individualEmailEngagementData?.ssot__Individual__dlm[0].ssot__EmailEngagement__dlm[0].ssot__EngagementTypeId__c,
     emailSentDate:
-      individualEmailEngagementData.ssot__Individual__dlm[0].ssot__EmailEngagement__dlm[0].ssot__SentDateTm__c,
+      individualEmailEngagementData?.ssot__Individual__dlm[0].ssot__EmailEngagement__dlm[0].ssot__SentDateTm__c,
   };
 
   // SMS engagement data
@@ -49,16 +49,17 @@ export const parseDataGraph = (dataGraph) => {
 
   const smsEngagement = {
     engagementDate:
-      individualSmsEngagementData.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].ssot__EngagementDateTm__c,
+      individualSmsEngagementData?.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].ssot__EngagementDateTm__c,
     engagementType:
-      individualSmsEngagementData.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].ssot__EngagementTypeId__c,
+      individualSmsEngagementData?.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].ssot__EngagementTypeId__c,
     keywordText:
-      individualSmsEngagementData.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].ssot__KeywordTxt__c,
-    smsName: individualSmsEngagementData.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].ssot__Name__c,
+      individualSmsEngagementData?.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].ssot__KeywordTxt__c,
+    smsName: individualSmsEngagementData?.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].ssot__Name__c,
     sendTimePhoneNumber:
-      individualSmsEngagementData.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].ssot__SendTimePhoneNumber__c,
-    sentDate: individualSmsEngagementData.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].ssot__SentDateTm__c,
-    templateName: individualSmsEngagementData.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].Tempate_Name,
+      individualSmsEngagementData?.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0]
+        .ssot__SendTimePhoneNumber__c,
+    sentDate: individualSmsEngagementData?.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].ssot__SentDateTm__c,
+    templateName: individualSmsEngagementData?.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].Tempate_Name,
   };
 
   // latest appointment data
@@ -67,12 +68,12 @@ export const parseDataGraph = (dataGraph) => {
   );
 
   const latestAppointment = {
-    appointmentTime: individualAppointmentData.ssot__Individual__dlm[0].Appointment__dlm[0].Appointment_Time_c__c,
-    createdDate: individualAppointmentData.ssot__Individual__dlm[0].Appointment__dlm[0].CreatedDate__c,
-    name: individualAppointmentData.ssot__Individual__dlm[0].Appointment__dlm[0].Name__c,
-    procedure: individualAppointmentData.ssot__Individual__dlm[0].Appointment__dlm[0].Procedure_c__c,
-    procedureId: individualAppointmentData.ssot__Individual__dlm[0].Appointment__dlm[0].Procedure_Id__c,
-    status: individualAppointmentData.ssot__Individual__dlm[0].Appointment__dlm[0].Status_c__c,
+    appointmentTime: individualAppointmentData?.ssot__Individual__dlm[0].Appointment__dlm[0].Appointment_Time_c__c,
+    createdDate: individualAppointmentData?.ssot__Individual__dlm[0].Appointment__dlm[0].CreatedDate__c,
+    name: individualAppointmentData?.ssot__Individual__dlm[0].Appointment__dlm[0].Name__c,
+    procedure: individualAppointmentData?.ssot__Individual__dlm[0].Appointment__dlm[0].Procedure_c__c,
+    procedureId: individualAppointmentData?.ssot__Individual__dlm[0].Appointment__dlm[0].Procedure_Id__c,
+    status: individualAppointmentData?.ssot__Individual__dlm[0].Appointment__dlm[0].Status_c__c,
   };
 
   const formattedDataGraphObject = {

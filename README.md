@@ -104,6 +104,7 @@ In order to re-create this out, you will need the following:
 - An assigned Amazon Connect [phone number](https://docs.aws.amazon.com/connect/latest/adminguide/ag-overview-numbers.html)
 - A custom Agent Workspace view ([example view](./amazon-connect/custom-view-schema.json))
 - An [Amazon Connect Contact Flow](https://docs.aws.amazon.com/connect/latest/adminguide/connect-contact-flows.html) ([example Contact Flow](./amazon-connect/data-cloud-data-graph-lookup.json))
+- Deployed [AWS resources](./aws/deploy.yaml)
 
 ## Deployment to AWS
 

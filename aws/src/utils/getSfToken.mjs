@@ -61,7 +61,7 @@ export const getSfToken = async () => {
     }
 
     // check if the token is still valid
-    if (!cachedJwtExpiresAt || cachedJwtExpiresAt - Math.round(Date.now() / 1000) < 5400) {
+    if (!cachedJwtExpiresAt || cachedJwtExpiresAt - Math.round(Date.now()) < 5400 * 1000) {
       console.log("Token is expired. Fetching a new token!");
 
       // Salesforce CRM Access Token Payload
@@ -93,7 +93,9 @@ export const getSfToken = async () => {
       fetchedSalesforceAccessToken = salesforceCrmResponseData.access_token;
 
       // save jwt token to dynamodb
-      const tokenExpiration = +salesforceCrmResponseData.issued_at + 7200 * 1000;
+      const issuedAtDate = new Date(+salesforceCrmResponseData.issued_at);
+      issuedAtDate.setHours(issuedAtDate.getHours() + 2);
+      const tokenExpiration = issuedAtDate.getTime();
 
       await dynamo.send(
         new PutCommand({

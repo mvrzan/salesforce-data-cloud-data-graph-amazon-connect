@@ -114,7 +114,7 @@ This section does not cover the whole solution deployment, just a few AWS resour
 - Secrets Manager
 - DynamoDB
 
-The first step is to update the `template.yaml` file with your environment-specific secrets. The following values need to be updated in the `template.yaml` file:
+The first step is to update the `deploy.yaml` file with your environment-specific secrets. The following values need to be updated in the `deploy.yaml` file:
 
 ```
         {

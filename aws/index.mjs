@@ -7,11 +7,10 @@ export const handler = async (event) => {
   try {
     console.log("Lambda Function handler called");
     const { token, salesforceInstanceUrl } = await getSfToken();
-
-    console.log("Event:", event);
+    const callerPhoneNumber = event.Details?.ContactData.CustomerEndpoint.Address;
 
     // Data Cloud Data Graph lookup
-    const dataCloudDataGraphLookupUrl = `${salesforceInstanceUrl}/services/data/v61.0/ssot/data-graphs/data/UC_phone_number_lookup?lookupKeys=ssot__FormattedE164PhoneNumber__c=241.572.2605`;
+    const dataCloudDataGraphLookupUrl = `${salesforceInstanceUrl}/services/data/v61.0/ssot/data-graphs/data/UC_phone_number_lookup?lookupKeys=ssot__FormattedE164PhoneNumber__c=${callerPhoneNumber}`;
 
     // Send data to Data Cloud Data Graph lookup API
     const dataCloudDataGraphLookupResponse = await fetch(dataCloudDataGraphLookupUrl, {

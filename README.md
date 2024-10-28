@@ -34,7 +34,9 @@ In this project, you will find an example of how to utilize Salesforce Data Clou
 
 Data Cloud has a feature called [Data Graphs](https://help.salesforce.com/s/articleView?id=sf.c360_a_data_graphs.htm&language=en_US&type=5). These Data Graphs combine and transform normalized table data from data model objects (DMOs) into new, materialized views of your data. Because the data is precalculated, you can make fewer calls, and queries respond in near real time.
 
-This capability opens up various use cases that can expose very specific dataset via a [REST API](https://developer.salesforce.com/docs/platform/connectapi/references/spec?meta=getDataGraphDataByLookup) and allow external applications outside of the Salesforce ecosystem to tap into that enriched data. In this particular scenario, this project demonstrates how the Amazon Contact center solution pulls the data from Data Cloud's Data Graph in order to enrich the Agent Workspace with caller-specific information in a [custom view](https://docs.aws.amazon.com/connect/latest/adminguide/view-resources-custom-view.html).
+> The alternative to this is to use the [Data Cloud Query API](https://developer.salesforce.com/docs/atlas.en-us.c360a_api.meta/c360a_api/c360a_api_query_v2_call_overview.htm) which comes with a significant longer response time
+
+This capability opens up various use cases that can expose very specific dataset via a [REST API](https://developer.salesforce.com/docs/platform/connectapi/references/spec?meta=getDataGraphDataByLookup) and allow external applications outside of the Salesforce ecosystem to tap into that enriched data. In this particular scenario, this project demonstrates how the Amazon Connect contact center solution pulls the data from Data Cloud's Data Graph in order to enrich the Agent Workspace with caller-specific information in a [custom view](https://docs.aws.amazon.com/connect/latest/adminguide/view-resources-custom-view.html).
 
 ## How does it work?
 
@@ -45,7 +47,7 @@ This capability opens up various use cases that can expose very specific dataset
 The application flow is the following:
 
 - A caller calls an Amazon Connect phone number
-- The caller gets routed to an IVR (Interactive Voice Response) system
+- The caller gets routed to a Contact Flow (IVR - Interactive Voice Response) system
 - The IVR invokes a dedicated Lambda function
 - The Lambda function reads from a DynamoDB for the token value and expiration
   - If the token has expired, it fetches sensitive environment variables from the Secrets Manager

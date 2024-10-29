@@ -104,7 +104,7 @@ In order to re-create this out, you will need the following:
 - An assigned Amazon Connect [phone number](https://docs.aws.amazon.com/connect/latest/adminguide/ag-overview-numbers.html)
 - A custom Agent Workspace view ([example view](./amazon-connect/custom-view-schema.json))
 - An [Amazon Connect Contact Flow](https://docs.aws.amazon.com/connect/latest/adminguide/connect-contact-flows.html) ([example Contact Flow](./amazon-connect/data-cloud-data-graph-lookup.json))
-- Deployed [AWS resources](./aws/deploy.yaml)
+- Deployed [AWS resources](./aws/template.yaml)
 
 ## Deployment to AWS
 
@@ -114,7 +114,7 @@ This section does not cover the whole solution deployment, just a few AWS resour
 - Secrets Manager
 - DynamoDB
 
-The first step is to update the `deploy.yaml` file with your environment-specific secrets. The following values need to be updated in the `deploy.yaml` file:
+The first step is to update the `template.yaml` file with your environment-specific secrets. The following values need to be updated in the `template.yaml` file:
 
 ```
         {
@@ -156,12 +156,12 @@ This encoded string is going to be your `RSA_PRIVATE_KEY` variable.
 
 ### YAML template updates
 
-Once you have all the variables in your `deploy.yaml` file, save the file and proceed to the next step.
+Once you have all the variables in your `template.yaml` file, save the file and proceed to the next step.
 
 The next step is to zip the contents of the `aws/` folder. This means you will zip the following files and folders:
 
 ```
-deploy.yaml
+template.yaml
 node_modules/
 src/
  |-- utils

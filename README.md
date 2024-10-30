@@ -63,6 +63,8 @@ The application flow is the following:
 
 ## Feature demo
 
+![](./screenshots/data-graph-demo.gif)
+
 ## Amazon Connect Workspace (custom view)
 
 ![](./screenshots/agent-workspace-custom-view.png)

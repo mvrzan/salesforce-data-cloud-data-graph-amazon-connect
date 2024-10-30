@@ -53,7 +53,7 @@ export const parseDataGraph = (dataGraph) => {
     engagementType:
       individualSmsEngagementData?.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].ssot__EngagementTypeId__c,
     keywordText:
-      individualSmsEngagementData?.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].ssot__KeywordTxt__c,
+      individualSmsEngagementData?.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].ssot__KeywordText__c,
     smsName: individualSmsEngagementData?.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0].ssot__Name__c,
     sendTimePhoneNumber:
       individualSmsEngagementData?.ssot__Individual__dlm[0].ssot__MessageEngagement__dlm[0]
